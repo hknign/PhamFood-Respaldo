@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pham Food - Restaurant</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Incluye la librería Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navegación {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            padding-bottom: 2rem 0;
+        }
+        
+        .navegación ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        
+        .navegación ul li {
+            display: inline;
+        }
+        
+        
+        .navegación ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .navegación ul li a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        .hero-section{
+            height: 90vh;
+            background:url(imagenes/presentacion.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(96, 132, 155, 0.7);
+            background-blend-mode: multiply;
+            display: flex;
+            align-items: center;
+        }
+        h2{
+            font-weight: bold;
+            font-size: 24px;
+            color: rgb(187, 103, 43); 
+        }
+        #Titulo{
+            font-weight: bold;
+            font-size: 46px;
+            color: rgb(210, 19, 131); 
+            text-transform: uppercase;
+            width: 100%; 
+            text-align:left; 
+        }
+        .Titulo2 {
+        text-align: center;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        }
+
+        .Titulo3 {
+        text-align: center;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        }
+        #Nombre_Empresa{
+            margin-top: -20px;
+            font-weight:bold;
+            font-size: 72px;
+            color: lemonchiffon;
+        }
+
+        #proveedores{
+            color: tomato;
+            text-align: center;
+            padding-top: 3rem;
+        }
+
+        #introduccion{
+            font-weight: bold;
+            color: #f4f4f4;
+        }
+        .CONTAINER{
+            display: flex;
+            align-items: center;
+        }
+        .CONTAINER p{
+            margin-left:10px ;
+        }
+        .Categorias{
+            text-align: center;
+            margin-top: -40px;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 3rem;
+        margin-right: 15px;
+        margin-bottom: 3rem;
+        margin-left: 15px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+        #Cuenta {
+            margin-left:-0.5rem;
+        }
+        #Testimos{
+            text-align: center;
+            color: darkgoldenrod;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .card-text-precio{
+            color: rgb(92, 82, 6);
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- muestra un icono atractivo que da paso a un atractivo al cliente-->
+    <header class="header-landing">
+        <div class="logo-header">
+            <img src="imagenes/icono.png" alt="" class="logo-header">
+        </div>
+    </header>
+
+    <!-- Barra de navegación de la página-->
+    <nav class="navegación">
+        <ul>
+            <li><a href="#inicio" > Inicio</a></li>
+            <li><a href="#Productos">Productos</a></li>
+            <li><a href="#historia">Sobre Nosotros</a></li>
+            <li><a href="#Elección"> Reseñas</a></li>
+            <li><a href="#Sucursales">Sucursales</a></li>
+            <li><a href="#Contacto">Contáctanos</a></li>
+
+        </ul>
+    </nav>
+    <br>
+
+    <!-- Esta corresponde a la sección de inicio que muestra la imagen
+    de fondo y muestra un breve texto introductorio a la empresa-->
+    <section class="hero-section">
+        <article id="inicio">
+            <div class="wrap-hero-section">
+                <h2 id="Titulo">Restaurant y Comida al Paso</h2>
+                <h1 id="Nombre_Empresa">PhamFood</h1>
+                <p id="introduccion">
+                    Somos un Restaurant instaurado en Valdivia desde hace 50 años
+                    y hemos llegado para resolver los problemas que te angustian
+                    uno de ellos sabemos que es el Hambre y el ansia de probar nuevas recetas dándole un gusto al paladar.
+                    <br><br>
+                <p id="llamada">¡Qué mejor que saciar tus necesidades en nuestro restaurant 
+                    de alta calidad! </p>
+                    <div class="wrap-cta">
+                        <a href="#historia" class="cta-a"> Más Información</a>
+                    </div>
+                </p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Esta corresponde a la sección de logos de proveedores o socios
+    de la empresa-->
+
+    <section class="logos-section">
+        
+        <h1 id="proveedores"> Nuestros proveedores y Socios</h1>
+        <div class="wrap-logos-section">
+            <a href="https://www.micoca-cola.cl/">
+                <img src="imagenes/coca-cola-logo.png" alt="" class="logo-brand">
+            </a>
+            
+            <a href="https://www.rappi.cl/">
+                <img src="imagenes/rappi-logo.png" alt="" class="logo-brand">
+            </a>
+            
+            <a href="https://www.ubereats.com/cl">
+                <img src="imagenes/Uber-Eats-logo.png" alt="" class="logo-brand">
+            </a>
+            
+
+            <a href="https://www.pedidosya.cl/ ">
+                <img src="imagenes/LogoPedidosYa.png" alt="" class="logo-brand">
+            </a>
+
+
+            <a href="https://www.paypal.com/cl/home">
+                <img src="imagenes/paypal-logo.png" alt="" class="logo-brand">
+            </a>
+            <!-- aqui van marcas asociadas o proveedores-->
+            <!-- y lo redirecciona a las páginas oficiales de cada socio, como es fictioso esto es solo para decorar la página
+            acorde a socios reales.-->
+        </div>
+    </section>
+    <br>
+    <hr>
+    <!-- Esta corresponde a la sección donde se muestran los productos
+    del restaurant-->
+    <section class="section-servicios-section">
+        <article id="Productos">
+            <div class="wrap-title-section">
+                <h2> Menú</h2>
+                <br>
+            </div>
+
+            <div class="Categorias">
+                <h4>Sandwiches / Platos / Bebestibles / Postres</h4>
+            </div>
+
+            <div class="wrap-servicios-section">
+
+                <div class="CONTAINER"> <!-- CARDS HAMBURGUESAS-->
+                    <div class="Titulo2">
+                        <h2>Hamburguesas</h2>
+                    </div>
+                    
+                    <br>
+                    <div class="card">
+                        <img src="imagenes/hamburguesa-doble.jpg" class="card-img-top" alt="Hamburguesa Doble">
+                        <div class="card-body">
+                            <h5 class="card-title">Hamburguesa Doble</h5>
+                            <p class="card-text">Ingredientes: Hamburguesa doble, pepinillo, tomate, cebolla, queso cheddar.</p>
+                            <p class="card-text-precio">Precio: $7.600</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="imagenes/hamburguesavegana.jpg" class="card-img-top" alt="Hamburguesa Vegana">
+                        <div class="card-body">
+                            <h5 class="card-title">Hamburguesa Vegana</h5>
+                            <p class="card-text">Ingredientes: Carne de res artificial, lechuga, tomate, mayonesa vegana.</p>
+                            <p class="card-text-precio">Precio: $5.900</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="imagenes/hamburguesaAlaPham.jpg" class="card-img-top" alt="Hamburguesa a la Pham">
+                        <div class="card-body">
+                            <h5 class="card-title">Hamburguesa a la Pham</h5>
+                            <p class="card-text">Ingredientes: 3 porciones de Carne de res, tomate, cebolla, queso cheddar.</p>
+                            <p class="card-text-precio">Precio: $8.590</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="imagenes/hamburguesatradicional.jpg" class="card-img-top" alt="Hamburguesa tradicional">
+                        <div class="card-body">
+                            <h5 class="card-title">Hamburguesa tradicional</h5>
+                            <p class="card-text">Ingredientes: Carne de res, lechuga, tomate, cebolla, queso cheddar.</p>
+                            <p class="card-text-precio">Precio: $5.500</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <div class="CONTAINER"> <!-- CARDS PLATOS PRINCIPALES-->
+                    <div class="card">
+                        <img src="imagenes/Tagliatelle.jpg" class="card-img-top" alt="Tagliatelle Alla Bolognese.">
+                        <div class="card-body">
+                            <h5 class="card-title">Tagliatelle alla Bolognese</h5>
+                            <p class="card-text">Ingredientes: Carne de cerdo, Tagliatelle, ajo, tomate, aceite oliva, mantequilla.</p>
+                            <p class="card-text-precio">Precio: $12.990</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="card">
+                        <img src="imagenes/Tagliatelle_al_Pomodoro.jpg" class="card-img-top" alt="Tagliatelle al Pomodor">
+                        <div class="card-body">
+                            <h5 class="card-title">Tagliatelle al Pomodoro</h5>
+                            <p class="card-text">Ingredientes: Carne de res, Tagliatelle, ajo, tomate, queso crema, albahaca, salchicha.</p>
+                            <p class="card-text-precio">Precio: $10.990</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="imagenes/Ravioli_di_carne.jpg" class="card-img-top" alt="Ravioli di carne">
+                        <div class="card-body">
+                            <h5 class="card-title">Ravioli di carne</h5>
+                            
+                            <p class="card-text">Ingredientes: Salsa(pomodoro, Bolognesa, crema), carne ternera, cerdo.
+           
+            
+                            </p>
+                            <p class="card-text-precio">Precio: $13.900</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="imagenes//mozzarella_01.jpg" class="card-img-top" alt="Ensalada Mozarella">
+                        <div class="card-body">
+                            <h5 class="card-title"> Mozzarella Di Bufala</h5>
+                            <p class="card-text">Ingredientes: Mozzarella di bufala, tomate, aceite oliva, sal, albahaca.</p>
+                            <p class="card-text-precio">Precio: $14.900</p>
+                        </div>
+                    </div>
+
+                    <div class="Titulo3">
+                        <h2>Platos Principales</h2>
+                    </div>
+                    
+                    <br>
+
+                </div>    
+
+                <div class="CONTAINER"> <!-- CARDS BEBESTIBLES-->
+                    <div class="Titulo2">
+                        <h2>Bebestibles</h2>
+                    </div>
+                    
+                    <br>
+                    <div class="card">
+                        <img src="imagenes/coca-cola.png" class="card-img-top" alt="Coca Sin Azúcar 2L">
+                        <div class="card-body">
+                            <h5 class="card-title">Coca-cola 2L Sin Azúcar</h5>
+                            <p class="card-text">Ingredientes: Agua carbonatada, color caramelo, ácido fosfórico, aspartamo, saborizantes naturales, cafeína.</p>
+                            <p class="card-text-precio">Precio: $1.690</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="imagenes/fanta.png" class="card-img-top" alt="Fanta 2L">
+                        <div class="card-body">
+                            <h5 class="card-title">Fanta 2L </h5>
+                            <p class="card-text">Ingredientes: Agua carbonatada, azúcar, ácido cítrico, saborizantes natural y artificial, sucralosa almidón modificado.
+                                <br>
+                            </p>
+                            <br>
+                            <p class="card-text-precio">Precio: $1.690</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="imagenes/sprite.png" class="card-img-top" alt="Sprite 2l">
+                        <div class="card-body">
+                            <h5 class="card-title">Sprite 2L </h5>
+                            <p class="card-text">Ingredientes: Agua carbonatada, azúcar, ácido cítrico, saborizantes natural, citrato de sodio, benzoato de sodio, sucralosa.</p>
+                            <p class="card-text-precio">Precio: $1.690</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="imagenes/cocaconazucar.png" class="card-img-top" alt="Coca-cola 3L">
+                        <div class="card-body">
+                            <h5 class="card-title">Coca-Cola Original 3L</h5>
+                            <p class="card-text">Ingredientes: Agua carbonatada, azúcar, color caramelo, ácido fosfórico, aspartamo, saborizantes naturales, cafeína.</p>
+                            <p class="card-text-precio">Precio: $2.290</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="CONTAINER"> <!-- CARDS POSTRES-->
+                    <div class="card">
+                        <img src="imagenes/chocolatechispas.jpg" class="card-img-top" alt="Chocolate Chispas">
+                        <div class="card-body">
+                            <h5 class="card-title">Donut de chocolate con chispas</h5>
+                            <p class="card-text">Ingredientes: azúcar, chocolate, chispas, esencia vainilla.</p>
+                            <p class="card-text-precio">Precio: $3.990</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="imagenes/doblechocolate.jpg" class="card-img-top" alt="Doble Cholocate">
+                        <div class="card-body">
+                            <h5 class="card-title">Donut doble chocolate</h5>
+                            <p class="card-text">Ingredientes: leche, azúcar, chocolate, cacao, esencia vainilla. </p>
+                            <p class="card-text-precio">Precio: $3.990</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="imagenes/pielimon.jpg" class="card-img-top" alt="Pie limon">
+                        <div class="card-body">
+                            <h5 class="card-title">Pie de limón</h5>
+                            <p class="card-text">Ingredientes: leche condensada, jugo limón, azúcar, huevo.</p>
+                            <p class="card-text-precio">Precio: $4.200</p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <img src="imagenes/manzanacanela.jpg" class="card-img-top" alt="Manzana Canela">
+                        <div class="card-body">
+                            <h5 class="card-title">Donut de canela</h5>
+                            <p class="card-text">Ingredientes: Canela, estractos de manzana, relleno de crema, coco.</p>
+                            <p class="card-text-precio">Precio: $5.200</p>
+                        </div>
+
+                    </div>
+
+                    <div class="Titulo2">
+                        <h2>Postres</h2>
+                    </div>
+                    <br>
+                </div>
+
+                <!-- Carrusel Bebestibles-->
+
+                <section id="carousel-Bebestibles" class="py-5">
+                    <div id="carouselindicadores" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselindicadores" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="1"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="2"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="imagenes/coca-cola.png" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/cocaconazucar.png" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/sprite.png" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/fanta.png" alt="Fourth slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselindicadores" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselindicadores" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section>
+
+                
+                <!-- Carrusel Postres-->
+                <section id="carousel-Postres" class="py-5">
+                    <div id="carouselindicadores" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselindicadores" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="1"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="2"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="imagenes/chocolatechispas.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/pielimon.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/doblechocolate.jpg" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/manzanacanela.jpg" alt="Fourth slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselindicadores" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselindicadores" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section>
+
+                
+                <!-- Carrusel Hamburguesas-->
+
+                <section id="carousel-Hamburguesas" class="py-5">
+                    <div id="carouselindicadores" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselindicadores" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="1"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="2"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="imagenes/hamburguesa-doble.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/hamburguesavegana.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/hamburguesaAlaPham.jpg" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/hamburguesatradicional.jpg" alt="Fourth slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselindicadores" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselindicadores" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section>
+
+                
+                <!-- Carrusel Platos-->
+                <section id="carousel-Platos" class="py-5">
+                    <div id="carouselindicadores" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselindicadores" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="1"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="2"></li>
+                            <li data-target="#carouselindicadores" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="imagenes/Tagliatelle_al_Pomodoro.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/Ravioli_di_carne.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/Tagliatelle.jpg" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="imagenes/mozzarella_01.jpg" alt="Fourth slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselindicadores" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselindicadores" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section>
+        </article>
+    </section>
+
+    <br><hr><br>
+    <!-- Sección de Sobre nosotros-->
+    <section class="section two-column-section">
+        
+        <article id="historia"> 
+            <div class="wrap-title-section">
+                <h1>Sobre Nosotros</h1>
+            </div>
+                <section id="historia2" class="py-5">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Card para la historia de la empresa -->
+                            <div class="col-md-12">
+                                <div class="card mb-4">
+                                    <img src="imagenes/historia.jpg" class="card-img-top" alt="Historia de PhamFood">
+                                    <div class="card-body">
+                                        <h2 class="card-title">50 años de excelencia culinaria</h2>
+                                        <p class="card-text">
+                        
+                                            <p>En el corazón de la pintoresca ciudad de Valdivia, donde el río Calle-Calle abraza las orillas y la naturaleza se entrelaza con la historia, se encuentra PhamFoods, un oasis culinario que ha cautivado los corazones y los paladares de los valdivianos durante décadas.</p>
+                                            <br><br>
+                                            <p>Fundado en 1972 por el visionario chef vietnamita, el Sr. Nguyen Pham, PhamFoods nació de una pasión por fusionar los sabores exóticos del sudeste asiático con los ingredientes frescos y abundantes de la región de Los Ríos. Desde sus humildes comienzos como un pequeño puesto callejero de comida al paso hasta convertirse en un ícono gastronómico de Valdivia, PhamFoods ha sido un faro de innovación, calidad y hospitalidad.</p>
+                                            <br><br>
+                                            <p>Nuestra historia es una historia de amor por la comida, la comunidad y la cultura. Cada plato que servimos en PhamFoods cuenta una historia: desde el aromático Pho de Vietnam hasta el exquisito Ceviche Chilote, cada bocado es una aventura culinaria que celebra la diversidad y la creatividad.</p>
+                                            <br><br>
+                                            <p>Pero PhamFoods no es solo un lugar para disfrutar de deliciosas comidas; es un lugar donde las historias se entrelazan y las amistades se forjan. Nuestro acogedor salón es un espacio donde amigos y familiares se reúnen para compartir risas, conversaciones y, por supuesto, buena comida.</p>
+                                            <br><br>
+                                            <p>A lo largo de los años, PhamFoods ha sido testigo de momentos especiales en la vida de nuestros clientes: desde cenas románticas hasta celebraciones de cumpleaños y reuniones familiares. Cada visita es una oportunidad para crear recuerdos duraderos y experiencias inolvidables.</p>
+                                            <br><br>
+                                            <p>En PhamFoods, nuestra misión es simple: deleitar a nuestros clientes con sabores auténticos, servicio excepcional y una experiencia gastronómica única en cada visita. Seguimos comprometidos con la excelencia y la innovación, mientras honramos nuestras raíces y la rica herencia culinaria de Valdivia.</p>
+                                            <br><br>
+                         
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card para testimonios de clientes -->
+                            <article id="Elección">
+                                <h4 id="Testimos">Testimonios de Nuestros Clientes</h4>
+                                
+                                <!-- Primer cliente-->
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Testimonios de Clientes</h5>
+                                        <p>Julián Torres Alvárez</p>
+                                        <p class="card-text">Viaje desde Australia hasta acá a Valdivia para mejorar mi Español
+                                            y tuve la oportunidad de pasar a deleitarme en este Restaurant de primera categoría.
+                                            Completamente recomiendo esta comida para diferentes tipos de turistas.
+                                            </p>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <!-- Segundo cliente-->
+
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Jessica Mendez López</h5>
+                                        
+                                        <p class="card-text">Soy una ciclista apasionada por viajar por el mundo recorriendo sus carreteras
+                                            y a su vez como me encanta ver el mundo sobre 2 ruedas. También me gusta vivir en un planeta donde
+                                            se puede deleitar de buenas comidas que rellenen energías.
+
+                                            Por eso es que doy 5 estrellas a Pham Food, porque además de mezclar técnicas culinarias de diferentes culturas,
+                                            me recuerda a la comida hogareña que frecuentaba en mi niñez.
+
+                                            Por eso, no tengo nada más que agregar más que mis profundas gracias por recordarme mi infancia.
+                                            </p>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <!-- Tercer cliente-->
+
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Testimonios de Clientes</h5>
+                                        <p>Michael Franklin Klein</p>
+                                        <p class="card-text">I don't understand much Spanish but in this restaurant it's not very important not 
+                                            to know the language because the employees serve you in English anyway.
+                                             With the little I know about Spanish I can say that everything was delicioso.
+
+                                             (Traducción)
+
+                                             No entiendo mucho el Español pero en este restaurante no es muy imporante saberlo, porque los empleados
+                                             te atienden en Inglés igual.
+
+                                             Con lo poco que entiendo del Español puedo decir que todo estuvo muy delicioso.
+                                            </p>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <!-- Cuarto cliente-->
+
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Testimonios de Clientes</h5>
+                                        <p>Pedro Torres Reyes</p>
+                                        <p class="card-text">Me equivoqué al asignar las estrellas. Soy un anciano que no entiende mucho de tecnología
+                                            pero lo que puedo decir es que me encanta probar nuevas comidas, algo que supo hacer este restaurant. 
+
+                                            Para un anciano de 85 años es bastante bueno tener este tipo de sorpresas a esta edad. 
+
+                                            No recordaba haber comido tan bien, además la atención es excelente.
+                                            </p>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star" style="color: transparent;"></i>
+                                            <i class="fas fa-star" style="color: transparent;"></i>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <!-- Quinto cliente-->
+
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Testimonios de Clientes</h5>
+                                        <p>Ludmila Roppo Telli</p>
+                                        <p class="card-text">Vengo de Italia y la verdad allá son muy exigentes con el nivel de pasta que se entrega a los ciudadanos
+                                            todavia encuentro que puede mejorar la pasta de este restaurant, pero es el único punto débil que vi. Por lo demás, la atención es increible.
+                                            Puede seguir mejorando.
+                                            </p>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star" style="color: transparent;"></i>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <hr>
+            
+            <br><br>
+            <!-- Sección de sucursales de PhamFood Obviamente es ficticio-->
+            <article id="Sucursales">
+                <section id="sucursales" class="py-5">
+                    <div class="container">
+                        <h2 class="text-center mb-4">Nuestras Sucursales</h2>
+                        <div class="row">
+                            <!-- Este restaurant no existe, generé las imagenes con Ia mediante el Nombre ficticio que inventé-->
+                            <!-- Card para la primera sucursal -->
+                            <!-- tener en cuenta que las imagenes son las únicas que he obtenido de otros medios-->
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <img src="imagenes/sucursal2.png" class="card-img-top" alt="Sucursal 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nuestra sucursal Principal</h5>
+                                        <p class="card-text">Dirección: Santiago Dervis Ojeda 4435</p>
+                                        <p class="card-text">Teléfono: +56983409865</p>
+                                        <p class="card-text">Correo: phamfood1@gmail.com</p>
+                                        <br>
+                                        <a href="mapa1.html" class="btn btn-primary">Ver en Mapa</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card para la segunda sucursal -->
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <img src="imagenes/sucursal1.png" class="card-img-top" alt="Sucursal 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nueva Franquicia</h5>
+                                        <p class="card-text">Dirección: Camilo Henríquez 879.</p>
+                                        <p class="card-text">Teléfono: +56983409865</p>
+                                        <p class="card-text">Correo: phamfood2@gmail.com</p>
+                                        <br>
+                                        <a href="mapa2.html" class="btn btn-primary">Ver en Mapa</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <br><br>
+            <hr>
+            <br><br>
+            <div class="wrap-two-column">
+
+                <div class="wrap-img_two-column">
+
+                    <img src="imagenes/CHEFASO.jpg" alt="">
+                    <br><br><br>
+                    <img src="imagenes/chef2.jpg" alt="">
+                    <br><br><br>
+
+                </div>
+
+
+                <div class="wrap-img_two-column">
+                    <div class="wrap-text-column">
+
+                        <h2>¿Por qué Escogernos?</h2>
+                        
+                        <p>Experiencia culinaria única: En Pham Food, no solo ofrecemos deliciosa comida, sino una experiencia culinaria que te transportará a los sabores exóticos del sudeste asiático fusionados con los ingredientes frescos y locales de Valdivia.
+                            Calidad y frescura garantizadas: Nos enorgullecemos de utilizar ingredientes frescos y de la más alta calidad en cada plato que servimos. Desde nuestras verduras hasta nuestras carnes, puedes confiar en que cada bocado estará lleno de sabor y frescura.
+                            Variedad para todos los gustos: Nuestro extenso menú ofrece una amplia variedad de opciones para satisfacer todos los gustos y preferencias. Desde platos tradicionales hasta opciones vegetarianas y veganas, hay algo para todos en Pham Food.
+                            Ambiente acogedor y familiar: Nuestro restaurante ofrece un ambiente cálido y acogedor que te hará sentir como en casa desde el momento en que entres por la puerta. Ya sea que vengas en pareja, con amigos o en familia, siempre serás recibido con una sonrisa.
+                            Servicio excepcional: En Pham Food, nos esforzamos por brindar un servicio excepcional a cada uno de nuestros clientes. Desde el momento en que te sientas en tu mesa hasta que te marchas, nuestro equipo estará atento a todas tus necesidades para garantizar una experiencia gastronómica inolvidable.
+                            Compromiso con la excelencia: Nos comprometemos a ofrecer la mejor experiencia gastronómica posible, y eso significa mantener los más altos estándares de calidad en todo lo que hacemos. Desde la preparación de los alimentos hasta el servicio en el comedor, siempre nos esforzamos por superar tus expectativas.
+                            Esperamos que estas razones te convenzan de visitarnos en Pham Food y disfrutar de una experiencia culinaria excepcional. ¡Te esperamos con los brazos abiertos y una mesa llena de delicias! </p>
+                            
+                        <div class="wrap-cta">
+
+                            <a href="#Elección" class="cta-a"> Porque Nuestros clientes dicen</a>
+                        </div>
+                        
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </section>
+    <!-- Sección de contacto-->
+    <section class="section two-column-section form">
+
+        <article id="Contacto">
+    
+            <div class="wrap-two-column">
+    
+                <div class="wrap-img_two-column form-column">
+    
+                    <div class="wrap-text-column">
+    
+                        <h3> Contacta con Nosotros</h3>
+                        <br>
+    
+    
+                        <!-- AQUI VA EL FORMULARIO-->
+    
+                        <form action="" method="post" class="form" onsubmit="mostrarAlerta()">
+    
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" id="nombre" required="">
+                            <br>
+
+                            <label for="email">Correo electrónico:</label>
+                            <br>
+                            <input name="email" id="email"  required=""></input>
+                            <br><br>
+                            
+                            <label for="telefono">Teléfono de Contacto:</label><br>
+                            <input type="tel" name="telefono" id="telefono" required="">
+                            <br>
+                    
+                            <label for="tipo ">Tipo de consulta:</label>
+                            <br>
+                            <select name="tipo" id="tipo" required="">
+                                <option value="">Seleccione una opción</option>
+                                <option value="consulta">Consulta</option>
+                                <option value="reclamo">Reclamo</option>
+                            </select>
+                            <br><br>
+    
+                            <label for="asunto">Asunto:</label>
+                            <input type="text" name="asunto" id="asunto" required="">
+                            <br><br>
+    
+                            <label for="mensaje">Mensaje:</label>
+                            <br>
+                            <textarea name="mensaje" id="mensaje" rows="4" cols="40" required=""></textarea>
+                            <br><br>
+    
+                            <input type="submit" value="Enviar" class="cta-a">
+    
+                        </form>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="wrap-img_two-column valdivia-column">
+                    <img src="imagenes/valdivia.jpeg" alt="Imagen de Valdivia">
+                    <img src="imagenes/mapa.jpg" alt="Imagen de Valdivia">   
+                </div>
+
+        </article>
+
+    </section>
+    <br><br><br>
+    <!-- pie de página-->
+    <footer class="footer-section">
+        <div class="wrap-footer-section">
+
+            <div class="wrap-social-logos">
+
+                <ul>
+                    <!-- solo redirecciona a los sitios web oficiales debido a que no existen cuentas para la empresa
+                    ficticia, de igual manera puse nicknames ficticios -->
+                    <li>
+                        <div class="CONTAINER">
+                            <a href="https://web.facebook.com/">
+                                <img src="imagenes/facebook.png" alt=" logo facebook" class="social-logo">
+                            </a>
+                            <p id="Cuenta">@PhamFoodValdivia</p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="CONTAINER">
+                            <a href="https://twitter.com/">
+                                
+                                <img src="imagenes/Nuevo-logo-de-Twitter.jpg" alt="logo twitter" class="social-logo">
+                            </a>
+                            <p id="Cuenta">@PhamFoodLosRios</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="CONTAINER">
+                            <a href="https://www.instagram.com/">
+                                <img src="imagenes/logo-instagram-1080p.png" alt="logo instagram" class="social-logo">
+                            </a>
+                            <p id="Cuenta">@PhamFood</p>
+                        </div>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+            <div class="menu-footer-section">
+                <div class="wrap-menu-footer-section">
+
+                    <ul> 
+
+                        <li><a href="#inicio" > Inicio</a></li>
+                        <li><a href="#Productos">Productos</a></li>
+                        <li><a href="#historia">Sobre Nosotros</a></li>
+                        <li><a href="#Elección"> Reseñas</a></li>
+                        <li><a href="#Sucursales">Sucursales</a></li>
+                        <li><a href="#Contacto">Contáctanos</a></li>
+            
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="menu-footer-section">
+
+            <div class="footer-creds">
+
+                    <p>@Copyright 2024- PhamFood. Todos los derechos reservados.  Fono: +56983409865</p>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').carousel({
+                interval: 3500 
+            });
+        });
+    </script>
+
+    <script>
+        function mostrarAlerta() {
+            alert("Su consulta/reclamo ha sido enviada con éxito.");
+        }
+    </script>
+</body>
+</html>
